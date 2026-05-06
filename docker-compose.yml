@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+   db:
+      image: postgres:latest
+      container_name: scheduling_db
+      environment:
+         POSTGRES_USER: admin
+         POSTGRES_PASSWORD: admin123
+         POSTGRES_DB: barbershop_db
+      ports:
+        - "5431:5432"
+      restart: always
